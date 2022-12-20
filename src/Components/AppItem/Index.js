@@ -1,3 +1,4 @@
+import './Index.css'
 const AppItem = (props) => {
     const{latestCatagrest} = props
     const {appId,appName,imageUrl} = latestCatagrest

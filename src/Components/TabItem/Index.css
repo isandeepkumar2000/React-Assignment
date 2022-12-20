@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+}
+
+.Tab_items{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 10px;
+}
+.Tab_list{
+    margin: 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.listitems{
+    display: flex;
+    flex-wrap: wrap;
+   
+}

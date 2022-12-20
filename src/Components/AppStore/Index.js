@@ -329,20 +329,27 @@ class AppStore extends Component {
        <h1 className='AppStore_Heading'>App Store</h1>
        <div className='AppStore_InputBox'>
         <input value = {searchInput} type= "search" className='InputArea' placeholder='Search' onChange = {this.filterChangeInput} />
+
         </div> 
         <div className='Tab-Container'>
 
             <ul className='Tab_items'>
+       
             {tabsList.map(tabDetails => (
                 <TabItem tabDetails = {tabDetails} 
                 clickTabItem = {this.onClickChange}
+                
             />
             ))}
+          
             </ul>
+       
         </div>
+        <div className='listitems'>
         {filtertheinputvalue.map(projectsCatagres => (
 <AppItem latestCatagrest = {projectsCatagres}/>
     ))}
+    </div>
      </div>
 
       </div>

@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+   
+}
+.AppStore_Heading{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 700;
+    font-family: Roboto;
+}
+.InputArea{
+    margin: auto;
+    display: block;
+    width: 300px;
+    text-align: center;
+  padding: 10px 15px;  background-image: linear-gradient(#dfe2e5, #ace0f9);
+ 
+}
+.AppStore-container{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(#dfe2e5, #ace0f9);
+
+}
