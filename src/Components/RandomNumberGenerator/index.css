@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    
+}
+.RandomNumberGenerator-Conntaner{
+    background-image: url("https://assets.ccbp.in/frontend/react-js/random-no-generator-bg.png"); 
+}
+
+.RandomNumberGenerator-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+.RandomNumberGenerator-Heading{
+    font-size: 45px;
+    font-weight: 700;
+    color: #0b69ff;
+
+}
+
+.RandomNumberGenerator-Paragraph{
+    margin: 20px;
+    font-weight: 600;
+
+}
+span{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+button{
+    align-items: center;
+    appearance: button;
+    background-color: #0276FF;
+    border-radius: 8px;
+    border-style: none;
+    box-shadow: rgba(255, 255, 255, 0.26) 0 1px 2px inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    padding: 15px 29px;
+}
+
+.GererateNumberResult{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 35px;
+    color: #0276FF;
+}

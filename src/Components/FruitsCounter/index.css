@@ -1,0 +1,66 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:  #ffd569;
+}
+
+.Banana{
+    width: 350px;
+} 
+.Mango{
+    width: 350px;
+}
+.Fruits-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 85vh;
+  
+}
+.fruits-Heading{
+    display: flex;
+    justify-content: center;
+
+}
+.Fruits-Container{
+    background-color: white;
+    margin: 40px;
+    border-radius:20px ;
+    -webkit-border-radius:20px ;
+    -moz-border-radius:20px ;
+    -ms-border-radius:20px ;
+    -o-border-radius:20px ;
+}
+button{
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-top: 10px;
+
+  display: inline-block;
+  outline: 0;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 9px 22px;
+  font-size: 22px;
+  height: 50px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  line-height: normal;
+  background: linear-gradient(90deg,#e8fa22 0,#48e400 100%);
+  border-radius: 50px;
+  transition: color .2s ease,background-color .2s ease,box-shadow .2s ease;
+  
+}
+button:hover {
+    box-shadow: 0 0 0 0.5rem #7dea5c;
+    transform: translateY(-2px);
+}
+button:active{
+    box-shadow: inset 0px 3px 7px #d6d6e7;
+    transform: translateY(2px);
+}

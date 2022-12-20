@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+ .HideShow-Button{
+    display: flex;
+    margin-top: 20px;
+
+}
+.HideShow-Heading{
+   font-size: 45px;
+   color: white;
+
+} 
+.HideShow-items{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.FirstName{
+    margin: 20px;
+
+}
+.LastName{
+    margin: 20px;
+    
+}
+
+.HideShow-Joe{
+    border-radius: 10px;
+    border: 1px solid #fddddb;
+    background-color: #fddddb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+.HideShow-Johee{
+    border-radius: 10px;
+    border: 1px solid #fddddb;
+    background-color: #fddddb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    margin-left: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.HideShow-items{
+    background-image: linear-gradient(to right, #fa7257 , #fc63a7);
+}
+
+button{
+    background: white;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: #dd1264;
+    cursor: pointer;
+    display: flex;
+    font-family: Mija,-apple-system,BlinkMacSystemFont,Roboto,"Roboto Slab","Droid Serif","Segoe UI",system-ui,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 33.4929px;
+    padding: 3px 5px;
+    text-align: center;
+    border: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+

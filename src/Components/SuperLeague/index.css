@@ -1,0 +1,77 @@
+.headerSuperLeage{
+    color: #f8fafc;
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Roboto;
+    margin-top: 40px;
+  }
+  
+  .Flag-one{
+    width: 500px;
+    
+  }
+  .Flag-two{
+    width: 500px;
+    
+  }
+  *{
+    background-color:  #0f172a; 
+  }
+  .flag-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  @media (min-width: 320px) and (max-width: 575px) {
+    .headerSuperLeage{
+      font-size: 33px;
+  
+    }
+  
+    .Flag-one{
+      width: 200px;
+      
+    }
+    .Flag-two{
+      width: 200px;
+      
+    }
+  }
+  
+  
+  @media (min-width: 575px) and (max-width: 995px) {
+    .headerSuperLeage{
+      font-size: 50px;
+  
+    }
+  
+    .Flag-one{
+      width: 263px;
+      
+    }
+    .Flag-two{
+      width: 263px;
+      
+    }
+  }
+  
+  @media (min-width: 995px) and (max-width: 1300px) {
+    .headerSuperLeage{
+      font-size: 73px;
+  
+    }
+  
+    .Flag-one{
+      width: 400px;
+      
+    }
+    .Flag-two{
+      width: 400px;
+      
+    }
+  }

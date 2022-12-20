@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+box-sizing: border-box;
+font-family: Roboto;
+font-weight: 700;
+
+}
+.AppLogin-Conatiner{
+    background-color: white; 
+    padding: 60px;
+    margin-top: 10px;
+    
+}
+
+.AppLogin-items{
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 82vh;
+    background-color:  #2b2c49;
+    background-image: linear-gradient(#2b2c49, #b5b9ff);
+
+}
+.AppLogin-Welcome{
+    font-size: 55px;
+    margin: 20px;
+    color: white;
+}
+.AppLogin-Login{
+    font-size: 55px;
+    margin: 20px;
+    color: white;
+}
+
+button{
+      border-radius: 3px;
+      border: 1px solid #b5b9ff;
+      background-color: white;
+      color: #2b2c49;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+      outline: none;
+      padding: 8px .8em;
+    
+    }
+ 

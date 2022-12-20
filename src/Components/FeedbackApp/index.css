@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+.list-container{
+    list-style: none;
+}
+.emojis-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    margin-top: 85px;
+}
+.emoji-container{
+    display: flex;
+}
+.emoji-container{
+    display: flex;
+    align-items: center;
+}
+.list-container{
+ margin: 47px;
+    background-color: white;
+    border: none;   
+}
+.red{
+    width: 60px;
+}
+.blue{
+    width: 60px;
+}
+.green{
+    width: 60px;
+}
+.emojis-container{
+   background-color: white;
+   border-radius: 15px;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   -webkit-border-radius: 15px;
+   -moz-border-radius: 15px;
+   -ms-border-radius: 15px;
+   -o-border-radius: 15px;
+}
+.emoji{
+    padding: 95px 200px;
+    background-image: linear-gradient(to right, #ffeeee , #ffc0bb);
+    height: 100vh;
+
+
+}
+.tq-container{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+    border: 1px solid black;
+    border: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.paragrpah{
+    margin-top: 20px;
+   
+}
+.tq{
+    padding: 88px 200px;
+   height: 100vh;
+    background-image: linear-gradient(to right, #ffeeee , #ffc0bb);
+}
+.para{
+
+    margin-top: 10px;
+    font-weight: 700;
+}
+.image{
+    width: 82px
+}
+
+.head{
+    font-size: 45px;
+}
+@media (min-width: 500px) and (max-width: 865px) {
+    .emoji {
+        padding: 106px 66px;
+       
+    }
+
+}
+@media (min-width: 310px) and (max-width: 500px) {
+    
+    .head{
+        font-size: 20px;
+    }
+    .red{
+        width: 45px;
+    }
+    .green{
+        width: 45px;
+    }
+
+    .blue{
+        width: 45px;
+    }
+    .list-container {
+        margin: 14px;
+     
+    }
+    .emoji {
+        padding: 102px 8px;
+    }
+
+
+}
