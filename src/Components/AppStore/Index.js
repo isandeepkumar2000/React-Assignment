@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-import TabItem from './Tabitem/Index'
+import TabItem from '../TabItem/Index'
+import AppItem from '../AppItem/Index'
+import './Index.css'
+
+
 
 const tabsList = [
     {tabId: 'SOCIAL', displayText: 'Social'},
@@ -292,24 +296,55 @@ const tabsList = [
 
 class AppStore extends Component {
 
+    state = {activeTAbId: appsList[0].category,
+    searchInput: ""}
+
+    onClickChange = Tabchange => {
+        this.setState({
+            activeTAbId:Tabchange
+        })
+    }
+    filterChangeInput = (event) => {
+        this.setState({
+            searchInput: event.target.value
+        })
+    }
+    getFilterValueofChatagraes = () => {
+        const {activeTAbId} = this.state
+        const filterCatagraes = appsList.filter(eachcatagrestDetails => eachcatagrestDetails.category === activeTAbId)
+        return filterCatagraes
+    }
+
   render() {
+   const {searchInput} = this.state
+   const filterCatagraes = this.getFilterValueofChatagraes()
+   const filtertheinputvalue = filterCatagraes.filter((eachitem) => {
+    return eachitem.appName.toLowerCase().includes(searchInput.toLowerCase())
+})
+    console.log(filterCatagraes)
+
     return (
       <div className='AppStore-container'>
      <div className='AppStore_items'>
        <h1 className='AppStore_Heading'>App Store</h1>
        <div className='AppStore_InputBox'>
-        <input type= "search" className='InputArea' placeholder='Search' />
+        <input value = {searchInput} type= "search" className='InputArea' placeholder='Search' onChange = {this.filterChangeInput} />
         </div> 
         <div className='Tab-Container'>
 
-<ul className='Tab-items'>
-   {tabsList.map(tabDetails => (
-    <TabItem tabDetails = {tabDetails} 
-    clickTabItem = {this.clickTabItem}/>
-   ))}
-</ul>
+            <ul className='Tab_items'>
+            {tabsList.map(tabDetails => (
+                <TabItem tabDetails = {tabDetails} 
+                clickTabItem = {this.onClickChange}
+            />
+            ))}
+            </ul>
         </div>
+        {filtertheinputvalue.map(projectsCatagres => (
+<AppItem latestCatagrest = {projectsCatagres}/>
+    ))}
      </div>
+
       </div>
     )
   }
