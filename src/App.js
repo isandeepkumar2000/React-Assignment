@@ -1,11 +1,11 @@
 import './App.css';
-import AppStore from './Components/AppStore/Index';
+import CoinTossed from './Components/AppStore/Index';
 function App() {
   return (
     <div className="App">
 
  
- <AppStore />
+ <CoinTossed />
 
     </div>
   );
