@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url('https://assets.ccbp.in/frontend/react-js/reviews-bg.png');
+}
+.ReviewApp_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 27px;
+
+}
+
+
+.paraDescribtion{
+    width: 280px;
+}
+.ReviewApp_items{
+  
+
+    height: 427px;
+    margin-top: 118px;
+}
+.ReviewApp_Container{
+    padding: 15px 25px;
+   
+}
+.ReviewApp_Heading{
+    display: flex;
+    justify-content: center;
+    margin-right: 105px; 
+    margin-top: 20px;
+    font-size: 55px;
+    color: white;
+}
+.Images{
+    margin-left: 20px;
+}
+
+
+.paraUsername{
+color: white;
+margin: 10px;
+font-size: 20px;
+font-weight: 600;
+margin-top: 12px;
+}
+.paraCompanyName{
+  
+    margin-left: 45px;
+    font-size: 20px;
+    font-weight: 600;
+}

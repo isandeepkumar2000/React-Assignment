@@ -1,11 +1,12 @@
 import './App.css';
-import AppStore from './Components/AppStore/Index';
+import ReviewApp from './Components/Index';
 function App() {
   return (
     <div className="App">
 
+
  
- <AppStore />
+ <ReviewApp />
 
     </div>
   );
