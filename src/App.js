@@ -1,11 +1,11 @@
 import './App.css';
-import AppStore from './Components/AppStore/Index';
+import Comments from './Components/Comments/Index';
 function App() {
   return (
     <div className="App">
 
  
- <AppStore />
+ <Comments />
 
     </div>
   );
