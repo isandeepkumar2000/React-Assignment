@@ -1,17 +1,33 @@
 import React, { Component } from "react";
 import AppointmentItem from "../AppointmentItem/Index";
 import { v4 as uuidv4 } from "uuid";
+import {format} from 'date-fns'
 
 class Appointment extends Component {
   state = { Title: "", Date: "", AppointmentList: [] };
 
+
+  isShared = (id) => {
+    this.setState(prevState => ({
+      AppointmentList: prevState.AppointmentList.map(eachAppointment => {
+        if (id === eachAppointment.id) {
+          return {...eachAppointment, isChecked: !eachAppointment.isChecked}
+        }
+        return eachAppointment
+      }),
+    }))
+  };
+
   onSubmitButton = (event) => {
     event.preventDefault();
     const {Title, Date} = this.state;
+     const formattedDate = Date
+      ? format(new Date(Date), 'dd MMMM yyyy, EEEE')
+      : ''
     const newAppointment = {
       id: uuidv4(),
-      Title,
-      Date,
+      Title: Title,
+      Date:formattedDate,
       isChecked: false,
     };
     this.setState((prevstate) => ({
@@ -21,9 +37,6 @@ class Appointment extends Component {
     }));
   };
 
-  isShared = (id) => {
-    console.log("hyyy how are you")
-  };
 
   titleName = (event) => {
     this.setState({
