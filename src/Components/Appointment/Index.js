@@ -12,7 +12,7 @@ class Appointment extends Component {
       id: uuidv4(),
       Title,
       Date,
-      ischecked: false,
+      isChecked: false,
     };
     this.setState((prevstate) => ({
       AppointmentList: [...prevstate.AppointmentList, newAppointment],
@@ -25,7 +25,7 @@ class Appointment extends Component {
     this.setState((prevState) => ({
       CommentList: prevState.CommentList.map((eachAppnment) => {
         if (id === eachAppnment.id) {
-          return { ...eachAppnment, ischecked: !eachAppnment.ischecked };
+          return { ...eachAppnment, isChecked: !eachAppnment.isChecked };
         }
         return eachAppnment;
       }),
