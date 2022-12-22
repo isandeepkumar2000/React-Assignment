@@ -1,11 +1,11 @@
 import './App.css';
-import AppStore from './Components/AppStore/Index';
+import Appointment from './Components/Appointment/Index';
 function App() {
   return (
     <div className="App">
 
  
- <AppStore />
+ <Appointment />
 
     </div>
   );
