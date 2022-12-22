@@ -1,34 +1,33 @@
-const AppointmentItem = (props) => {
-  const { AppointmentProp ,isShared} = props;
-  const { Title, Date, id, isChecked } = AppointmentProp;
 
-  const starImgUrl = isChecked
-    ? "https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png"
-    : "https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png";
+import './Index.css'
+const AppointmentItem = props => {
+  const {appointmentDetails, toggleIsStarred} = props
+  const {id, title, date, isStarred} = appointmentDetails
 
-  const onClickSharedIcon = () => {
-    isShared(id);
-  };
+  const onClickStar = () => {
+    toggleIsStarred(id)
+  }
+
+  const staredImgUrl = isStarred
+    ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
+    : 'https://assets.ccbp.in/frontend/react-js/appointments-app/star-img.png'
 
   return (
-    <div className="LowerList">
-      <div className="LowerList-join">
-        <div className="LowerList_title">
-          <p className="LowerList_Title">{Title}</p>
-        </div>
-        <div
-          className="LowerList_Images"
+    <li className="appointment-list">
+      <div className="title-star-container">
+        <p className="title">{title}</p>
+        <button
           type="button"
-          onChange={onClickSharedIcon}
+          className="star-btn"
+          testid="star"
+          onClick={onClickStar}
         >
-          <img src={starImgUrl} alt="Imagess" />
-        </div>
+          <img className="star-img" src={staredImgUrl} alt="star" />
+        </button>
       </div>
+      <p className="date">Date: {date}</p>
+    </li>
+  )
+}
 
-      <div className="LowerList_Date">
-        <p className="LowerList_DateShown">{Date}</p>
-      </div>
-    </div>
-  );
-};
-export default AppointmentItem;
+export default AppointmentItem
