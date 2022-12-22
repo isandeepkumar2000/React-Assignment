@@ -22,11 +22,11 @@ ischecked: false,
   }))
 };
 
-isShared = (id) => {
+isShared = id => {
   this.setState((prevState) => ({
     CommentList: prevState.CommentList.map((eachAppnment) => {
       if (id === eachAppnment.id) {
-        return { ...eachAppnment, isChecked: !eachAppnment.isChecked };
+        return {...eachAppnment, isChecked: !eachAppnment.isChecked };
       }
       return eachAppnment;
     }),

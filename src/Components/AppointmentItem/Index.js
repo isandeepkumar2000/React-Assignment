@@ -19,9 +19,7 @@ const AppointmentItem = (props) => {
             <p className="LowerList_Title">{Title}</p>
         </div>
 
-        <div className="LowerList_Images"     type="button"
-            
-            onClick={onClickLikeIcon}>
+        <div className="LowerList_Images" type="button" onClick={onClickLikeIcon}>
     
 <img src= {starImgUrl} alt = "ichecked" />
         </div>
