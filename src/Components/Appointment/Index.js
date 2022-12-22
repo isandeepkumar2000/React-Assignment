@@ -7,7 +7,7 @@ class Appointment extends Component {
 
   onSubmitButton = (event) => {
     event.preventDefault();
-    const { Title, Date } = this.state;
+    const {Title, Date} = this.state;
     const newAppointment = {
       id: uuidv4(),
       Title,
@@ -22,14 +22,7 @@ class Appointment extends Component {
   };
 
   isShared = (id) => {
-    this.setState((prevState) => ({
-      CommentList: prevState.CommentList.map((eachAppnment) => {
-        if (id === eachAppnment.id) {
-          return { ...eachAppnment, isChecked: !eachAppnment.isChecked };
-        }
-        return eachAppnment;
-      }),
-    }));
+    console.log("hyyy how are you")
   };
 
   titleName = (event) => {
@@ -45,7 +38,7 @@ class Appointment extends Component {
   };
 
   render() {
-    const { Title, Date, AppointmentList } = this.state;
+    const {Title, Date, AppointmentList } = this.state;
 
     return (
       <div className="Appointment_Container">
@@ -87,8 +80,8 @@ class Appointment extends Component {
             {AppointmentList.map((eachAppointment) => {
               return (
                 <AppointmentItem
-                  AppointmentProp={this.eachAppointment}
-                  isShared={this.eachAppointment}
+                  AppointmentProp={eachAppointment}
+                  isShared={this.isShared}
                 />
               );
             })}
