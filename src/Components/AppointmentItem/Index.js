@@ -1,8 +1,8 @@
 
 
 const AppointmentItem = (props) => {
-    const {AppointmentProp ,isShared} = props
-    const {Title,Date,id,isChecked} = AppointmentProp
+    const {AppointmentProp} = props
+    const {Title,Date,id, isShared,isChecked} = AppointmentProp
 
     const starImgUrl = isChecked
     ? "https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png"
@@ -19,7 +19,9 @@ const AppointmentItem = (props) => {
             <p className="LowerList_Title">{Title}</p>
         </div>
 
-        <div className="LowerList_Images" type="button" onClick={onClickLikeIcon}>
+        <div className="LowerList_Images"     type="button"
+            
+            onClick={onClickLikeIcon}>
     
 <img src= {starImgUrl} alt = "ichecked" />
         </div>
