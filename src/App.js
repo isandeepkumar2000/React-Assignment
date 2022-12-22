@@ -1,11 +1,11 @@
 import './App.css';
-import Appointments from './Components/Appointment/Index';
+import Appointment from './Components/Appointment/Index';
 function App() {
   return (
     <div className="App">
 
  
- <Appointments />
+ <Appointment />
 
     </div>
   );

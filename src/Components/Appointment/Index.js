@@ -1,137 +1,129 @@
-import { Component } from "react";
-
-import { v4 as uuidv4 } from "uuid";
-import './Index.css'
-import { format } from "date-fns";
-
+import React, { Component } from "react";
 import AppointmentItem from "../AppointmentItem/Index";
+import { v4 as uuidv4 } from "uuid";
+// import{format} from 'date-fns'
 
-class Appointments extends Component {
-  state = {
-    titleInput: "",
-    dateInput: "",
-    appointmentsList: [],
-    isFilterActive: false,
+import './Index.css'
+class Appointment extends Component {
+  state = { Title: "", Date: "", AppointmentList: [] };
+
+  onSubmitButton = (event) => {
+    event.preventDefault();
+    const {Title, Date} = this.state;
+    //  const formattedDate = Date
+    //   ? format(new Date(Date), "dd MMMM yyyy, EEEE")
+    //   : "";
+    const newAppointment = {
+      id: uuidv4(),
+      Title,
+      Date,
+      isChecked: false,
+    };
+    this.setState((prevstate) => ({
+      AppointmentList: [...prevstate.AppointmentList, newAppointment],
+      Date: "",
+      Title: "",
+    }));
+  };
+  
+    onFilter = () => {
+    const { isChecked } = this.state;
+
+    this.setState({ isChecked: !isChecked });
+  };
+  
+  
+  renderAppointmentsList = () => {
+    const AppointmentList = this.getAppointmentList();
+
+    return AppointmentList.map((eachAppointment) => (
+      <AppointmentItem
+        key={eachAppointment.id}
+        AppointmentProp={eachAppointment}
+        isShared={this.isShared}
+      />
+    ));
+  };
+ 
+  getAppointmentList = () => {
+    const { AppointmentList, isChecked } = this.state;
+
+    if (isChecked) {
+      return AppointmentList.filter(
+        (eachTransaction) => eachTransaction.isChecked === true
+      );
+    }
+    return AppointmentList;
   };
 
-  toggleIsStarred = (id) => {
-    this.setState((prevState) => ({
-      appointmentsList: prevState.appointmentsList.map((eachAppointment) => {
+  isShared = (id) => {
+  this.setState((prevState) => ({
+    AppointmentList: prevState.AppointmentList.map((eachAppointment) => {
         if (id === eachAppointment.id) {
-          return { ...eachAppointment, isStarred: !eachAppointment.isStarred };
+          return { ...eachAppointment, isChecked: !eachAppointment.isChecked };
         }
         return eachAppointment;
       }),
     }));
   };
 
-  onFilter = () => {
-    const { isFilterActive } = this.state;
-
-    this.setState({ isFilterActive: !isFilterActive });
+  titleName = (event) => {
+    this.setState({
+      Title: event.target.value,
+    });
   };
 
-  onAddAppointment = (event) => {
-    event.preventDefault();
-
-    const { titleInput, dateInput } = this.state;
-    const formattedDate = dateInput
-      ? format(new Date(dateInput), "dd MMMM yyyy, EEEE")
-      : "";
-    const newAppointment = {
-      id: uuidv4(),
-      title: titleInput,
-      date: formattedDate,
-      isStarred: false,
-    };
-
-    this.setState((prevState) => ({
-      appointmentsList: [...prevState.appointmentsList, newAppointment],
-      titleInput: "",
-      dateInput: "",
-    }));
-  };
-
-  onChangeTitleInput = (event) => {
-    this.setState({ titleInput: event.target.value });
-  };
-
-  onChangeDateInput = (event) => {
-    this.setState({ dateInput: event.target.value });
-  };
-
-  renderAppointmentsList = () => {
-    const getFilteredAppointmentsList = this.getFilteredAppointmentsList();
-
-    return getFilteredAppointmentsList.map((eachAppointment) => (
-      <AppointmentItem
-        key={eachAppointment.id}
-        appointmentDetails={eachAppointment}
-        toggleIsStarred={this.toggleIsStarred}
-      />
-    ));
-  };
-
-  getFilteredAppointmentsList = () => {
-    const { appointmentsList, isFilterActive } = this.state;
-
-    if (isFilterActive) {
-      return appointmentsList.filter(
-        (eachTransaction) => eachTransaction.isStarred === true
-      );
-    }
-    return appointmentsList;
+  selectDate = (event) => {
+    this.setState({
+      Date: event.target.value,
+    });
   };
 
   render() {
-    const { titleInput, dateInput, isFilterActive } = this.state;
-    const filteredStarredBtn = isFilterActive
-      ? "filter-active-bg"
-      : "filter-inactive-bg";
-
+    const {Title, Date, isChecked } = this.state;
+const filterSteredBtn = isChecked
+  ? 'filter-active-bg'
+      : 'filter-inactive-bg'
     return (
-      <div className="app-container">
-        <div className="responsive-container">
-          <h1 className="heading">Add Appointment</h1>
-          <div className="appointments-container">
-            <img
-              className="input-sec-img"
-              src="https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png"
-              alt="appointments"
-            />
-            <form className="form" onSubmit={this.onAddAppointment}>
-              <label className="label" htmlFor="titleInput">
-                TITLE
-              </label>
-              <input
-                className="input"
-                type="text"
-                value={titleInput}
-                placeholder="Title"
-                id="titleInput"
-                onChange={this.onChangeTitleInput}
-              />
-              <label className="label" htmlFor="dateInput">
-                DATE
-              </label>
-              <input
-                className="input"
-                value={dateInput}
-                type="date"
-                id="dateInput"
-                placeholder="dd/mm/yyyy"
-                onChange={this.onChangeDateInput}
-              />
-              <button className="button" type="submit">
-                Add
-              </button>
-            </form>
+      <div className="Appointment_Container">
+        <div className="Appointment_Items">
+          <h1 className="Appointment_Heading">Add Appointment</h1>
+          <div className="Appointment_join">
+            <div className="Appointment_items_box">
+              <form className="Appointment_form" onSubmit={this.onSubmitButton}>
+                <div>
+                  <p className="Appointment_Paragraph">TITLE</p>
+                  <input
+                    value={Title}
+                    type="text"
+                    className="Name_input"
+                    placeholder="Title"
+                    onChange={this.titleName}
+                  />
+                </div>
+                <div>
+                  <p className="Appointment_Date">DATE</p>
+                  <input
+                    value={Date}
+                    type="date"
+                    className="DatePicker"
+                    onChange={this.selectDate}
+                  />
+                </div>
+                <div>
+                  <button type="submit" className="Appointment_button">
+                    ADD
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div className="Images_Appoinmtnent"></div>
           </div>
-          <hr className="separator" />
-          <div className="header-filter-container">
+          <hr className="Appointment_Details" />
+        <div className="header-filter-container">
             <h1 className="appointment-heading">Appointments</h1>
             <button
-              className={`starred-btn ${filteredStarredBtn}`}
+              className={`starred-btn ${filterSteredBtn}`}
               onClick={this.onFilter}
               type="button"
             >
@@ -145,4 +137,4 @@ class Appointments extends Component {
   }
 }
 
-export default Appointments;
+export default Appointment;
