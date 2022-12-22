@@ -1,21 +1,42 @@
 import React, { Component } from 'react'
 import AppointmentItem from '../AppointmentItem/Index'
-
+import {v4 as uuidv4} from 'uuid'
 
 class Appointment extends Component {
 state = {Title: "", Date: "", AppointmentList:[]}
 
 
+onSubmitButton = (event) => {
+  event.preventDefault();
+  const {Title,Date} = this.state
+  const newAppointment = {
+id: uuidv4(),
+Title,
+Date,
+ischecked: false,
+  }
+  this.setState((prevstate) => ({
+    AppointmentList: [...prevstate.AppointmentList, newAppointment],
+    Date: "",
+    Title: "",
+  }))
+};
 
+isShared = (id) => {
+  this.setState((prevState) => ({
+    CommentList: prevState.CommentList.map((eachAppnment) => {
+      if (id === eachAppnment.id) {
+        return { ...eachAppnment, isChecked: !eachAppnment.isChecked };
+      }
+      return eachAppnment;
+    }),
+  }));
 
-
-
-
-
+}
 
 titleName = (event) => {
   this.setState({
-    Name: event.target.value
+    Title: event.target.value
   })
 }
 
@@ -57,7 +78,7 @@ const {Title, Date, AppointmentList} = this.state
 <hr className='Appointment_Details' />
 <div className='Appointment_Details_Box'>
   {AppointmentList.map((eachAppointment) => {
-    return <AppointmentItem AppointmentProp = {this.eachAppointment}/> 
+    return <AppointmentItem AppointmentProp = {this.eachAppointment} isShared = {this.eachAppointment}/> 
   })}
 </div>
         </div>
