@@ -1,6 +1,6 @@
 const AppointmentItem = (props) => {
   const { AppointmentProp ,isShared} = props;
-  const { Title, Date, id, isChecked } = AppointmentProp;
+  const { Title, Dates, id, isChecked } = AppointmentProp;
 
   const starImgUrl = isChecked
     ? "https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png"
@@ -26,7 +26,7 @@ const AppointmentItem = (props) => {
       </div>
 
       <div className="LowerList_Date">
-        <p className="LowerList_DateShown">{Date}</p>
+        <p className="LowerList_DateShown">{Dates}</p>
       </div>
     </div>
   );

@@ -1,27 +1,27 @@
-import React, { Component } from "react";
-import AppointmentItem from "../AppointmentItem/Index";
-import { v4 as uuidv4 } from "uuid";
-// import{format} from 'date-fns'
+import React, { Component } from "react"
+import AppointmentItem from "../AppointmentItem/Index"
+import { v4 as uuidv4 } from "uuid"
+import{format} from 'date-fns'
 
 import './Index.css'
 class Appointment extends Component {
-  state = { Title: "", Date: "", AppointmentList: [] };
+  state = { Title: "", Dates: "", AppointmentList: [] };
 
   onSubmitButton = (event) => {
     event.preventDefault();
-    const {Title, Date} = this.state;
-    //  const formattedDate = Date
-    //   ? format(new Date(Date), "dd MMMM yyyy, EEEE")
-    //   : "";
+    const {Title, Dates} = this.state;
+     const formattedDate = Dates
+      ? format(new Date(Dates), "dd MMMM yyyy, EEEE")
+      : "";
     const newAppointment = {
       id: uuidv4(),
       Title,
-      Date,
+      Dates: formattedDate,
       isChecked: false,
     };
     this.setState((prevstate) => ({
       AppointmentList: [...prevstate.AppointmentList, newAppointment],
-      Date: "",
+      Dates: "",
       Title: "",
     }));
   };
@@ -75,12 +75,12 @@ class Appointment extends Component {
 
   selectDate = (event) => {
     this.setState({
-      Date: event.target.value,
+      Dates: event.target.value,
     });
   };
 
   render() {
-    const {Title, Date, isChecked } = this.state;
+    const {Title, Dates, isChecked } = this.state;
 const filterSteredBtn = isChecked
   ? 'filter-active-bg'
       : 'filter-inactive-bg'
@@ -104,7 +104,7 @@ const filterSteredBtn = isChecked
                 <div>
                   <p className="Appointment_Date">DATE</p>
                   <input
-                    value={Date}
+                    value={Dates}
                     type="date"
                     className="DatePicker"
                     onChange={this.selectDate}
