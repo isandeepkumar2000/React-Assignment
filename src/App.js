@@ -1,11 +1,11 @@
 import './App.css';
-import AppStore from './Components/AppStore/Index';
+import MoneyManager from './Components/MoneyManager/Index';
 function App() {
   return (
     <div className="App">
 
  
- <AppStore />
+ <MoneyManager />
 
     </div>
   );

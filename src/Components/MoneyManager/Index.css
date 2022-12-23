@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.MoneyManager_Conatiner{
+    padding: 25px 35px;
+}
+.MoneyManager_items{
+   border: 2px solid black;
+}
+.MoneyManager_Box_Conatiner {
+    background-image: url(https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 105% 15%;
+    height: 209px;
+    padding: 65px;
+}
+.MoneyManager_Box_Heading{
+    font-size: 50px;
+    color: #7e858e;
+    font-weight: 700;
+}
+.MoneyManager_Box_Paragraph {
+    font-size: 31px;
+    margin-top: 5px;
+    font-weight: 700;
+    color: #7e858e;
+}
+span{
+    color: #0b69ff;
+    font-weight: 700;
+}
+.MoneyDetails_{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row; 
+  padding: 20px 25px;
+}
+.MoneyDetails_balanceAmount{
+    border: 2px solid #84cc16;
+    padding: 5px;
+    border-radius: 10px;
+  
+}
+.MoneyDetails_incomeAmount{
+    padding: 5px;
+    border: 2px solid  #06b6d4;
+    border-radius: 10px;
+   
+}
+.MoneyDetails_expensesAmount{
+    border: 2px solid  #7c3aed;
+    padding: 5px;
+    border-radius: 10px;
+  
+}
+.TransactionItem_Join{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.TransactionItem_History_Box_items{
+    display: flex;
+    align-items: center;
+   margin-top: 10px;
+}
+.Delete_button img{
+    width: 20px;
+}
+.MoneyDetails_Icons{
+    width: 200px;
+}
+.MoneyDetails_balanceAmount{
+    display: flex;
+    align-items: center;
+    background-color: #ecfccb;
+   
+}
+.MoneyDetails_incomeAmount{
+    display: flex;
+    align-items: center;
+    background-color: #cffafe;
+}
+.MoneyDetails_expensesAmount{
+    display: flex;
+    align-items: center;
+    background-color: #ede9fe;
+}
+.Heading{
+    font-size: 34px;
+}
+.TransactionItem_AddTransaction_Title{
+    margin-top: 10px;
+    font-size: 24px;
+}
+.TransactionItem_AddTransaction_Title_Picker{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+}
+.TransactionItem_AddTransaction_Amount{
+    margin-top: 10px;
+    font-size: 24px;
+    
+}
+.TransactionItem_AddTransaction_Amount_Picker{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+}
+.TransactionItem_AddTransaction_TYPE_Paragraph{
+    font-size: 24px;
+    margin-top: 10px;
+}
+.input{
+    width: 400px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+button{
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 20px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    margin-top: 10px;
+}
+
+
