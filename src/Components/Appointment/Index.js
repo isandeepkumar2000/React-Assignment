@@ -28,6 +28,7 @@ class Appointment extends Component {
   
     onFilter = () => {
     const { isChecked } = this.state;
+
     this.setState({ isChecked: !isChecked });
   };
   
@@ -80,9 +81,9 @@ class Appointment extends Component {
 
   render() {
     const {Title, Dates, isChecked } = this.state;
-const filterSteredBtn = isChecked
-  ? 'filter-active-bg'
-      : 'filter-inactive-bg'
+    const filterSteredBtn = isChecked
+    ? 'Done'
+        : 'Not Done'
     return (
       <div className="Appointment_Container">
         <div className="Appointment_Items">
@@ -116,17 +117,22 @@ const filterSteredBtn = isChecked
                 </div>
               </form>
             </div>
-            <div className="Images_Appoinmtnent"></div>
+            <div className="Images_Appoinmtnent">
+            <img className="appointment_image" src="https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png" alt=" appointments" />
+            
+            </div>
+           
           </div>
           <hr className="Appointment_Details" />
+        
         <div className="header-filter-container">
             <h1 className="appointment-heading">Appointments</h1>
             <button
-              className={`starred-btn ${filterSteredBtn}`}
+            className="Staed_button"
               onClick={this.onFilter}
               type="button"
             >
-              Starred
+              { filterSteredBtn}
             </button>
           </div>
           <ul className="appointments-list">{this.renderAppointmentsList()}</ul>

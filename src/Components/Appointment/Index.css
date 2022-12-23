@@ -1,13 +1,125 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+.Appointment_Container{
+  padding: 68px 70px;  background-image: linear-gradient( #fbc7d4, #9897f0);
+}
+.Appointment_Items{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+  background-color: white;
 
+  border-radius: 10px;
 
-  .filter-active-bg {
-    background-color: #9897f0;
-    color: #ffffff;
-    font-weight: 600;
-    border: none;
+}
+.Appointment_Heading{
+  font-size: 45px;
+}
+.Appointment_join{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.appointment_image{
+
+  width: 448px;
+
+}
+.Appointment_Paragraph{
+  font-weight: 900;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.Name_input{
+  width: 432px;
+  height: 49px;
+  border-radius: 10px;
+  text-align: center;
+ 
+}
+.Appointment_Date{
+  font-weight: 900;
+  margin-top: 20px;
+  font-size: 25px;
+}
+.DatePicker{
+  width: 430px;
+  height: 45px;
+  border-radius: 10px;
+  text-align: center;
+}
+.Appointment_button{
+  margin-top: 25px;
+  padding: 15px 59px;
+  border-radius: 10px;
+  border-style: none;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  background-color:  #8b5cf6;
+  border: 2px solid Pink;
+}
+.Appointment_items_box{
+  margin-right: 98px;
+    margin-top: 41px;
+}
+hr{
+  border: 3px solid Black;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 1000px;
+}
+.LowerList-join{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 5px;
+}
+.LowerList_title{
+  margin-right: 30px;
+}
+.LowerList{
+  border: 1px solid black;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+.appointments-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.appointment-heading{
+  font-size: 37px;
+  margin-top: 20px;
+  
+}
+.Staed_button{
+  margin-top: 24px;
+  font-size: 20px;
+  padding: 5px 30px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+.header-filter-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+@media (max-width: 1100px) {
+  .Appointment_Container {
+    padding: 68px 30px;
   }
-  .filter-inactive-bg {
-    border: 2px solid #9897f0;
-    color: #9897f0;
-    background-color: transparent;
+}
+@media (min-width: 1050px) and (max-width: 1200px) {
+  .Appointment_Container {
+    padding: 68px 30px;
   }
+}

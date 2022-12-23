@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+  }
+  .appointment-heading{
+    font-size: 35px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }

@@ -1,3 +1,5 @@
+import "./Index.css"
+
 const AppointmentItem = (props) => {
   const { AppointmentProp ,isShared} = props;
   const { Title, Dates, id, isChecked } = AppointmentProp;
