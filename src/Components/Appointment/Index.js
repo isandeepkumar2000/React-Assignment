@@ -28,7 +28,6 @@ class Appointment extends Component {
   
     onFilter = () => {
     const { isChecked } = this.state;
-
     this.setState({ isChecked: !isChecked });
   };
   
