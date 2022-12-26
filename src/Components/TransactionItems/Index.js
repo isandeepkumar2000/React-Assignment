@@ -4,15 +4,15 @@ const TransactionItem = (props) => {
    const { titleInput, amountInput, type , id } = TransactionItems;
 
     const onDeleteButton = () => {
-        console.log('id')
+     
         deleteButton (id)
     }
 
 return(
   
     <div className="TransactionItem_History_Box_items">
-       
-      <div className="TransactionItem_History_Box_items_Title">
+       <div className="Changing">      
+        <div className="TransactionItem_History_Box_items_Title">
         <p className="title">Title</p>
         <p>{titleInput}</p>
       </div>
@@ -29,6 +29,8 @@ return(
             <img src = "https://assets.ccbp.in/frontend/react-js/money-manager/delete.png" alt= "delete" />
         </button>
       </div>
+      </div>
+
     </div>
 
 

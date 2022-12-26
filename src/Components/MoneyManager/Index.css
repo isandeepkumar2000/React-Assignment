@@ -13,8 +13,8 @@
     background-image: url(https://assets.ccbp.in/frontend/react-js/money-manager/money-manager-bg.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 105% 15%;
-    height: 209px;
+    background-size: 105% 22%;
+    height: 195px;
     padding: 65px;
 }
 .MoneyManager_Box_Heading{
@@ -61,16 +61,17 @@ span{
     justify-content: space-between;
     padding: 20px;
 }
-.TransactionItem_History_Box_items{
-    display: flex;
+.Changing{
+
     align-items: center;
-   margin-top: 10px;
 }
 .Delete_button img{
     width: 20px;
 }
-.MoneyDetails_Icons{
-    width: 200px;
+  
+.MoneyDetails_Icons {
+    width: 174px;
+    padding: 15px;
 }
 .MoneyDetails_balanceAmount{
     display: flex;
@@ -135,11 +136,58 @@ button{
     line-height: 16px;
     min-height: 40px;
     outline: 0;
-    padding: 12px 20px;
+    padding: 5px 8px;
     text-align: center;
     text-rendering: geometricprecision;
     text-transform: none;
     margin-top: 10px;
 }
+.MoneyDetails_incomeAmount_Paragraph{
+    font-size: 25px;
+}
 
+.MoneyDetails_expensesAmount_Paragraph_Ruppess{
+    font-size: 30px;
+}
+.MoneyDetails_incomeAmount_Paragraph{
+    font-size: 25px;
+}
 
+.MoneyDetails_incomeAmount_Paragraph_Ruppess{
+    font-size: 30px;
+}
+.MoneyDetails_incomeAmount_Paragraph{
+    font-size: 25px;
+}
+
+.MoneyDetails_balanceAmount_Paragraph_Ruppess{
+    font-size: 30px;
+}
+.MoneyDetails_expensesAmount_item{
+    margin-left: 10px;
+}
+.MoneyDetails_balanceAmount_item {
+    margin-left: 30px;
+}
+.MoneyDetails_incomeAmount_item {
+    margin-left: 30px;
+}
+
+.TransactionItem_History_Box_items_Title{
+margin-right: 18px;
+}
+.TransactionItem_History_Box_items_Amount{
+    margin-right: 18px;
+}
+.TransactionItem_History_Box_items_Type{
+    margin-right: 18px;
+}
+.TransactionItem_History_Box_items{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.TransactionItem_History_Box_items{
+    margin: 10px;
+}
