@@ -1,11 +1,11 @@
 import './App.css';
-import AppStore from './Components/AppStore/Index';
+import DigialTimerApp from './Components/DigialTimerApp';
 function App() {
   return (
     <div className="App">
 
  
- <AppStore />
+ <DigialTimerApp />
 
     </div>
   );
