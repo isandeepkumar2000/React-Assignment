@@ -31,7 +31,7 @@ const filterArrayList = usersDeleteList.filter(eachitem =>  eachitem.id !== id)
 this.setState({
   usersDeleteList:filterArrayList
 })
-
+console.log("hyyy")
   }
 
   render() {
