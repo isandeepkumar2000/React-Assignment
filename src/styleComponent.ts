@@ -17,8 +17,23 @@ export const HeadingStyle = styled.div`
     border-radius: 10px;
     padding: 5px 309px;
     margin-top: 40px;
-    @media (max-width: 310px) {
-        padding: 3px 48px;
+    @media (min-width: 320px) {
+        padding: 5px 89px;
+  }
+  @media (min-width: 550px) {
+        padding: 5px 119px;
+  }
+  @media (min-width: 650px) {
+        padding: 5px 160px;
+  }
+  @media (min-width: 750px) {
+        padding: 5px 210px;
+  }
+  @media (min-width: 950px) {
+        padding: 5px 310px;
+  }
+  @media (min-width: 1150px) {
+        padding: 5px 410px;
   }
 `
 export const Centerstyle = styled.div`
