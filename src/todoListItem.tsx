@@ -1,6 +1,6 @@
 import React from "react"
 import { todoObject } from "./App"
-import { DeleteButton, GlobalStyle, Heading, HeadingStyle, JoinFlex, Paragraph } from "./styleComponent"
+import { DeleteButton, JoinFlex, Paragraph } from "./styleComponent"
 
 
 interface todoListItemProps {

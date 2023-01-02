@@ -10,7 +10,7 @@ export type todoObject = {
 
 const todos: todoObject[] = [
 {text: "walk the dog in thw hill of the Son", complete: false , id: 1 }, 
-{text:"no i dont hill of the Son", complete: false , id: 2},
+{text:"no i dont hill of the Son", complete: false , id: 1},
 {text:"no dont hill of the Son", complete: false , id: 3},
 {text:"no i hill of the Son", complete: false , id: 4},
 {text:"i dont hill of the Son", complete: false , id: 5},
