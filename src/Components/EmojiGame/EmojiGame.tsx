@@ -130,7 +130,7 @@ class EmojiGame extends Component {
     if (isEmojiPresent) {
       this.finishGameAndSetTopScore(clickedEmojisLength)
     } else {
-      console.log(clickEmojiList)
+   
       this.setState((previousState: MyState) => ({
         clickEmojiList: [...previousState.clickEmojiList, uniqueId],
       }))
