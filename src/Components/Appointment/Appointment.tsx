@@ -2,7 +2,18 @@ import React, { Component } from 'react'
 import { v4 as uuidv4 } from "uuid"
 import { format } from 'date-fns'
 import { AppointmentItem } from '../AppointmentItem/AppointmentItem'
-import {  AppointmentBoxes, AppointmentItems, GlobalStyleContainer } from './styleComponents'
+import {  AppointmentBoxButton,
+    AppointmentBoxes,
+     AppointmentButton, 
+     AppointmentHeading,
+      AppointmentHr,
+       AppointmentImage, 
+       AppointmentItemList, 
+       AppointmentItems, 
+       AppointmentTitle, 
+       AppointmentTitleInput,
+        GlobalStyleContainer 
+    } from './styleComponents'
 
 
 export type MyState = {
@@ -17,7 +28,6 @@ export type AppointmentObject = {
     Title: string
     uniqueId: string
     isChecked: boolean
-
 }
 
 class Appointment extends Component {
@@ -38,7 +48,7 @@ class Appointment extends Component {
         this.setState((prevState: MyState) => ({
             AppointmentList: [...prevState.AppointmentList, newAppointment],
             Dates: "",
-            Title: "",
+     Title: "",
         }));
     }
 
@@ -102,34 +112,31 @@ class Appointment extends Component {
             <div className='Appointment-Container'>
                 <GlobalStyleContainer/>
                 <AppointmentItems >
-
-                    <AppointmentBoxes className='Appointment-boxes'>
+                    <AppointmentBoxes >
                         <div className='Appointment-title-date'>
-                            <h1 className='Appointment_heading'>Add Appointment</h1>
+                            <AppointmentHeading >Add Appointment</AppointmentHeading>
                             <form onSubmit={this.onSubmitButton}>
-                                <p className='Appointment-title-paragraph'>TITLE</p>
-                                <input value={Title} type="text" className='Appointment-title-bar' placeholder='Title' onChange={this.titleName} />
-                                <p className='Appointment-Date-Selector'>DATE</p>
-                                <input value={Dates} type='date' className="Appointment-Date-Bar" onChange={this.selectDate} />
+                                <AppointmentTitle>TITLE</AppointmentTitle>
+                                <AppointmentTitleInput value={Title} type="text" placeholder='Title' onChange={this.titleName} />
+                                <AppointmentTitle >DATE</AppointmentTitle>
+                                <AppointmentTitleInput value={Dates} type='date'  onChange={this.selectDate} />
                                 <div>
-                                    <button type='submit' className='Appointment-Button'>Add</button>
+                                    <AppointmentButton>Add</AppointmentButton>
                                 </div>
                             </form>
                         </div>
                         <div className='Appointment_image'>
-                            <img className="appointment_image" src="https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png" alt=" appointments" />
+                            <AppointmentImage src="https://assets.ccbp.in/frontend/react-js/appointments-app/appointments-img.png" alt=" appointments" />
                         </div>
                     </AppointmentBoxes>
-                    <hr className='Appointment-Hr' />
-                    <AppointmentBoxes>
-                        <div>Appointment</div>
+                    <AppointmentHr  />
+                    <AppointmentBoxButton>
+                        <AppointmentTitle>Appointment</AppointmentTitle>
                         <div>
-                            <button onClick={this.onFilter}>  {FilterSharedButton}</button>
+                            <AppointmentButton onClick={this.onFilter}>  {FilterSharedButton}</AppointmentButton>
                         </div>
-
-                    </AppointmentBoxes>
-                    <ul className="appointments-list">{this.renderAppointmentsList()}</ul>
-               
+                    </AppointmentBoxButton>
+                    <AppointmentItemList >{this.renderAppointmentsList()}</AppointmentItemList>
             </AppointmentItems>
             </div>
         )

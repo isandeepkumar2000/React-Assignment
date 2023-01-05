@@ -1,5 +1,6 @@
 import React from "react"
 import { AppointmentObject } from "../Appointment/Appointment"
+import { AppointmentItemJoin, AppointmentItemJoinSection } from "./styleComponents"
 
 interface AppointmentItemProp {
   AppointmentProp: AppointmentObject
@@ -23,18 +24,17 @@ export const AppointmentItem: React.FC<AppointmentItemProp> = (props) => {
 
   return (
     <div className="AppointmentItem-Container">
-      <div className="AppointmentItem_items">
-        <div>
+      <AppointmentItemJoin >
+        <AppointmentItemJoinSection>
           <div>
             <p>{Title}</p>
             <p>{Dates}</p>
           </div>
           <div>
-          <button onClick = {onClickSharedIcon}>  <img src= {starImgUrl} alt="isChecked"/></button>
-          
+          <button onClick = {onClickSharedIcon}>  <img src= {starImgUrl} alt="isChecked"/></button> 
           </div>
-        </div>
-      </div>
+        </AppointmentItemJoinSection>
+      </AppointmentItemJoin>
     </div>
   )
 }
