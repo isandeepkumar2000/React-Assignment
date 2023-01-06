@@ -4,13 +4,8 @@ import MoneyDetails from '../MoneyDetails/MoneyDetails'
 import TransactionItem from '../TransactionItem/TransactionItem'
 import './index.css'
 
- type MyState = {
-    transactionsList: MoneyObject[],
-    titleInput: string
-    amountInput: string
-    //@ts-ignore
-    optionId: string
-}
+
+
 
 export type MoneyObject = {
   optionId: string
@@ -19,7 +14,18 @@ export type MoneyObject = {
   type:string
   amount: number
   title: string
+
 }
+
+
+ export type MyState = {
+    transactionsList: MoneyObject[],
+    titleInput: string
+    amountInput: string
+    optionId: string
+}
+
+
 
 const transactionTypeOptions = [
   {
@@ -65,8 +71,7 @@ class MoneyManager extends Component {
       type: typeOption!.displayText,
     }
 
-    this.setState(prevState => ({
-      //@ts-ignore
+    this.setState((prevState: MyState) => ({
       transactionsList: [...prevState.transactionsList, newTransaction],
       titleInput: '',
       amountInput: '',
